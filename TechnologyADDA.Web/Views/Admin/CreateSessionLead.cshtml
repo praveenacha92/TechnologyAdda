@@ -1,0 +1,42 @@
+﻿<div class="card" id="divCreateSession">
+    <div class="row">
+        <div class="card-body col-lg-4 mx-auto">
+            <h2>Create Session Lead</h2><br />
+            <div class="form-group">
+                <label>Employee Id <span class="required-star"><b>*</b></span></label>
+                <input type="text" class="form-control" id="txtEmpId" onkeypress="return allowNumbers(event);" maxlength="10" placeholder="Employee Id" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>Employee Email <span class="required-star"><b>*</b></span></label>
+                <input type="email" class="form-control" id="txtEmpEmail" onblur="validateEmail(this);"  maxlength="100" placeholder="Employee Email" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>Employee Name <span class="required-star"><b>*</b></span></label>
+                <input type="text" class="form-control" id="txtEmpName" maxlength="100" placeholder="Employee Name" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>Create Team Name <span class="required-star"><b>*</b></span></label>
+                <input type="text" class="form-control" id="txtTeamName" maxlength="100" placeholder="Create Team Name" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>Select Role <span class="required-star"><b>*</b></span></label>
+                <select class="form-control" id="ddlUserRole">
+                    <option>--Select--</option>
+                    @{
+                        if (ViewBag.Roles != null)
+                        {
+                            foreach (var data in ViewBag.Roles)
+                            {
+                                <option value="@data.Id">@data.RoleName</option>
+                            }
+                        }
+                    }
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success mr-2" id="btnCreateLead">Create Lead</button>
+            <button class="btn btn-light" onclick="clearFields();">Cancel</button>
+        </div>
+        <div class="col-lg-1">
+        </div>
+    </div>
+</div>

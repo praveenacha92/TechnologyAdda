@@ -1,0 +1,34 @@
+-----------------------------------------------Application Layers----------------------------
+1. TechnologyADDA.Business
+
+	> request calls from this layer to DataAccess only
+	> This layer should have only business login
+
+2. TechnologyADDA.DataAccess
+
+	> This layer should have interaction only DataBase operations
+	> shouldn't write any business logic
+
+3. TechnologyADDA.Models
+
+	> This layer should have only database models
+
+4. TechnologyADDA.Shared
+
+	> This layer can have any common func related to application level
+
+5. TechnologyADDA.Web
+
+	> request calls from this layer to Api 
+	> This layer can have views and controllers
+	> In controller we should not writ any business logic.
+
+6. TechnologyADDA.WebApi
+
+-----------------------------------------Coding Standards------------------------------------------
+
+1. Method should not more than 6 lines of code.
+2. Object creation should be in Constructor level
+3. Variables should have lowerCamelCase and Methods PascalCase
+4. "using" statements under namespaces and also remove unused namespaces
+5. don't write any hard coded values, it should be in Enums

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>DotNet F2 Locals</title>
+    <!-- plugins:css -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="~/Content/base.css" rel="stylesheet" />
+    <link href="~/Content/addons.css" rel="stylesheet" />
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="modal" style="display: none">
+        <div class="center">
+            <img src="~/Images/loader.gif" />
+        </div>
+    </div>
+    <div class="col-lg-5 mx-auto">
+        <div class="success-alert" style="display:none;">
+            @Html.Partial("_SuccessMessage")
+        </div>
+        <div class="failure-alert" style="display:none;">
+            @Html.Partial("_FailureMessage")
+        </div>
+    </div>
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/custom/addons.js"></script>
+    <script src="~/Scripts/custom/base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="~/Scripts/custom/off-canvas.js"></script>
+    <script src="~/Scripts/custom/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="~/Scripts/custom/dashboard.js"></script>
+    <script src="~/Scripts/app/app-initialrun.js"></script>
+    <script src="~/Scripts/custom/common.js"></script>
+    <script src="~/Scripts/custom/ezval-1.0.js"></script>
+    <script src="~/Scripts/custom/sweetalert.min.js"></script>
+    <!-- End custom js for this page-->
+
+    <script>
+        $(document).ajaxStart(function () {
+            $(".modal").show();
+        });
+        $(document).ajaxStop(function () {
+            $(".modal").hide();
+        });
+    </script>
+</body>
+</html>
