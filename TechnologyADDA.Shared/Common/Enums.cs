@@ -24,5 +24,10 @@
             public const string PublicLeftSidePanel = "~/Views/Public/_PublicLeftSidePanel.cshtml";
             public const string AdminLeftSidePanel = "~/Views/Admin/_AdminLeftSidePanel.cshtml";
         }
+
+        public class ApiUrls
+        {
+            public const string UserRegistration = "UserAccount/CreateUserRegistration";
+        }
     }
 }

@@ -40,20 +40,6 @@
         #region Action Methods
         public JsonResult UserRegister(UserAccount userAccount)
         {
-            var response = new Reponse<UserAccount>();
-            try
-            {
-                if (this._accountService.CreateUserRegistration(userAccount) == SatusCodes.Success)
-                {
-                    response.Success = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                // need to implement exception handling
-
-                // LogWriter.LogWrite(ex.Message.ToString());
-            }
             return Json("");
         }
         #endregion

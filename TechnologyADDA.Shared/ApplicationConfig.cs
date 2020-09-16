@@ -18,7 +18,6 @@
                 throw ex;
             }
             return sValue;
-
         }
 
         public static string GetConnectionStringsValue()
@@ -27,6 +26,20 @@
             try
             {
                 sValue = ConfigurationManager.ConnectionStrings[_connectionKey].ToString();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return sValue;
+        }
+
+        public static string GetApiUrl(string key)
+        {
+            string sValue = string.Empty;
+            try
+            {
+                sValue = ConfigurationManager.AppSettings[key].ToString();
             }
             catch (Exception ex)
             {
