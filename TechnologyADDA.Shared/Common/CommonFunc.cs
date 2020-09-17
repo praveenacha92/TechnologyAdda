@@ -1,13 +1,4 @@
-﻿/*************************************************************************
-* KNSS Application
-* __________________
-* 
-*  [2018] - [2019] Knowledge Sharing Session Application - KNSS  
-*  All Rights Reserved.
-* 
-* NOTICE:  
-*/
-namespace TechnologyADDA.Shared
+﻿namespace TechnologyADDA.Shared
 {
     using System;
     using System.Linq;

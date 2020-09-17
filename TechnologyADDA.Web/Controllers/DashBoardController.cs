@@ -5,20 +5,14 @@
     using TechnologyADDA.Models;
     using TechnologyADDA.Shared;
 
+    [CustomException]
     public class DashBoardController : Controller
     {
         #region Actions
         public ActionResult DashboardLand()
         {
-            try
-            {
-                var data = ApiCallHelper<UserAccount>.PostAsyncRequest(Enums.ApiUrls.UserRegistration, new UserAccount { Id = 5 });
-                return View(data);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            var data = ApiCallHelper<UserAccount>.PostAsyncRequest(Enums.ApiUrls.UserRegistration, new UserAccount { Id = 5 });
+
             return View();
         }
         public ActionResult CreateTeam()

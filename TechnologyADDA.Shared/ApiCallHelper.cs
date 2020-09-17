@@ -14,8 +14,7 @@
         {
             var client = GetHttpClient();
             HttpResponseMessage response = await client.GetAsync(actionUrl);
-            var data = await GetResponseData(response);
-            return data;
+            return await GetResponseData(response);
         }
 
         public static async Task<Response<T>> PostAsyncRequest(string actionUrl, T data)
