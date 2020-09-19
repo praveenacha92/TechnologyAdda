@@ -12,7 +12,6 @@
         public ActionResult DashboardLand()
         {
             var data = ApiCallHelper<UserAccount>.PostAsyncRequest(Enums.ApiUrls.UserRegistration, new UserAccount { Id = 5 });
-
             return View();
         }
         public ActionResult CreateTeam()

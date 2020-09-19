@@ -142,19 +142,7 @@ function failureAlert(message) {
     })
 }
 
-function loadChildView(controller, action) {
-    $.ajax({
-        type: 'POST',
-        cache: false,
-        url: '/' + controller + '/' + action,
-        success: function (data, textStatus, jqXHR) {
-            $('#divLoadChildView').html(data);
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            failureAlert('Failure');
-        }
-    })
-}
+
 
 function prepareTbody(teamData) {
     var html = '';

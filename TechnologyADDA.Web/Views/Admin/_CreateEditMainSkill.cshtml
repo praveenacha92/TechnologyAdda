@@ -1,0 +1,25 @@
+﻿@model TechnologyADDA.Models.MainSkill
+
+<div class="card">
+    <div class="row">
+        <div class="col-12">
+            <h2>Create Your Team</h2><br />
+            <div class="form-group">
+                <label>Member EmpId</label>
+                <input type="text" class="form-control" id="txtMemberEmpId" onkeypress="return allowNumbers(event);" maxlength="10" placeholder="Member EmpId" autocomplete="off">
+                <span id="errmsg"></span>
+            </div>
+            <div class="form-group">
+                <label>Member Name</label>
+                <input type="text" class="form-control" id="txtMemberName" maxlength="100" placeholder="Member Name" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>Member Email</label>
+                <input type="email" class="form-control" id="txtMemberEmail" maxlength="100" placeholder="Member Email" autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn-success mr-2" id="btnAddTeam">Add Team</button>
+            <button class="btn btn-light">Cancel</button>
+        </div>
+    </div>
+</div>
+

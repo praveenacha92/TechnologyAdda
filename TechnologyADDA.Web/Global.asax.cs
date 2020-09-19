@@ -28,7 +28,7 @@ namespace TechnologyADDA.Web
         {
             var keyValueList = new List<KeyValue>();
             XmlDocument doc = new XmlDocument();
-            doc.Load(Server.MapPath(Enums.Paths.XmlPath));
+            doc.Load(Server.MapPath(Enums.FilePaths.XmlPath));
             XmlNode idNodes = doc.SelectSingleNode("appmessages");
             foreach (XmlNode node in idNodes.ChildNodes)
             {

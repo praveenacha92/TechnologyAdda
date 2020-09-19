@@ -1,35 +1,25 @@
 ﻿namespace TechnologyADDA.Web.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
     using System.Web.Mvc;
+    using TechnologyADDA.Models;
+    using TechnologyADDA.Shared;
+
     public class AdminController : Controller
     {
-        [ValidateAntiForgeryToken]
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult CreateSessionLead()
+        public ActionResult ManageMainSkill()
         {
             return View();
         }
 
-        public ActionResult CreateMainSkill()
+        public JsonResult AddEditMainSkill()
         {
-            return View();
-        }
-
-        public ActionResult CreateChildSkill()
-        {
-            return View();
-        }
-
-        public ActionResult CreateTopic()
-        {
-            return View();
+            var htmlMainSkill = CustomPartialView.RenderPartialViewToString(this,Enums.PartialView.AddEditMainSkill, new MainSkill());
+            return Json(htmlMainSkill,JsonRequestBehavior.AllowGet);
         }
     }
 }
