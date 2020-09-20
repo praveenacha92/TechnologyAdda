@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DotNet fOr Locals</title>
+    <title>DotNet For Locals</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/materialdesignicons.min.css" rel="stylesheet" />
     <link href="~/Content/base.css" rel="stylesheet" />
     <link href="~/Content/addons.css" rel="stylesheet" />
     <link href="~/Content/style.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="images/favicon.png" />
+    @*<link rel="shortcut icon" href="images/favicon.png" />*@
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -22,14 +22,6 @@
         </div>
     </div>
     @Html.Partial(Enums.PartialView.ModalPopUp);
-    <div class="col-lg-5 mx-auto">
-        <div class="success-alert" style="display:none;">
-            @Html.Partial("_SuccessMessage")
-        </div>
-        <div class="failure-alert" style="display:none;">
-            @Html.Partial("_FailureMessage")
-        </div>
-    </div>
     @RenderBody()
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
@@ -52,6 +44,7 @@
     <script src="~/Scripts/app/app-initialrun.js"></script>
     <script src="~/Scripts/app/app-admin.js"></script>
     <script src="~/Scripts/app/app-common.js"></script>
+    <script src="~/Scripts/app/app-public.js"></script>
     <script src="~/Scripts/custom/common.js"></script>
     <script src="~/Scripts/custom/ezval-1.0.js"></script>
     <script src="~/Scripts/custom/sweetalert.min.js"></script>

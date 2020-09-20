@@ -37,7 +37,7 @@
             public const string FooterSecion = "~/Views/Shared/_FooterSection.cshtml";
 
             //Common
-            public const string ModalPopUp = "~/Views/AppCommon/_ModalPopUp.cshtml";
+            public const string ModalPopUp = "~/Views/Shared/_ModalPopUp.cshtml";
 
         }
 

@@ -174,7 +174,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminApiController.cs" />
-    <Compile Include="Controllers\AppCommonController.cs" />
     <Compile Include="Controllers\PublicApiController.cs" />
     <Compile Include="Controllers\UserAccountApiController.cs" />
     <Compile Include="Controllers\DashBoardController.cs" />
@@ -266,9 +265,7 @@
     <Content Include="Views\DashBoard\ScheduleSession.cshtml" />
     <Content Include="Views\DashBoard\SessionsHistory.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_FailureMessage.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_SuccessMessage.cshtml" />
     <Content Include="Views\DashBoard\_LeftSidePanel.cshtml" />
     <Content Include="Views\DashBoard\_RightSideContentPanel.cshtml" />
     <Content Include="Views\Shared\_FooterSection.cshtml" />
@@ -278,7 +275,7 @@
     <Content Include="Views\Public\TopicContent.cshtml" />
     <Content Include="Views\Admin\_CreateEditMainSkill.cshtml" />
     <Content Include="Views\Admin\CreateChildSkill.cshtml" />
-    <Content Include="Views\AppCommon\_ModalPopUp.cshtml" />
+    <Content Include="Views\Shared\_ModalPopUp.cshtml" />
     <Content Include="Views\Admin\ManageChildSkill.cshtml" />
     <Content Include="Views\Admin\ManageMainSkill.cshtml" />
   </ItemGroup>

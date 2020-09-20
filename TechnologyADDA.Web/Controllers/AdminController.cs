@@ -6,20 +6,23 @@
 
     public class AdminController : Controller
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
 
         public ActionResult ManageMainSkill()
         {
             return View();
         }
 
-        public JsonResult AddEditMainSkill()
+        #region Actions
+        public JsonResult AddMainSkill()
         {
             var htmlMainSkill = CustomPartialView.RenderPartialViewToString(this,Enums.PartialView.AddEditMainSkill, new MainSkill());
             return Json(htmlMainSkill,JsonRequestBehavior.AllowGet);
         }
+        public JsonResult EditMainSkill()
+        {
+            var htmlMainSkill = CustomPartialView.RenderPartialViewToString(this, Enums.PartialView.AddEditMainSkill, new MainSkill());
+            return Json(htmlMainSkill, JsonRequestBehavior.AllowGet);
+        }
+        #endregion
     }
 }

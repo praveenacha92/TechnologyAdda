@@ -1,24 +1,23 @@
 ﻿@model TechnologyADDA.Models.MainSkill
 
-<div class="card">
+<div class="card" id="dvMainSkill">
     <div class="row">
         <div class="col-12">
             <h2>Create Your Team</h2><br />
             <div class="form-group">
                 <label>Member EmpId</label>
-                <input type="text" class="form-control" id="txtMemberEmpId" onkeypress="return allowNumbers(event);" maxlength="10" placeholder="Member EmpId" autocomplete="off">
-                <span id="errmsg"></span>
+                <input type="text" class="form-control" id="txtMemberEmpId" maxlength="160" placeholder="Member EmpId" rule="{'Please enter Username','required'}" autocomplete="off">
             </div>
             <div class="form-group">
                 <label>Member Name</label>
-                <input type="text" class="form-control" id="txtMemberName" maxlength="100" placeholder="Member Name" autocomplete="off">
+                <input type="text" class="form-control" id="txtMemberName" maxlength="100" placeholder="Member Name" rule="{'Please enter Password','required'}" autocomplete="off">
             </div>
             <div class="form-group">
                 <label>Member Email</label>
-                <input type="email" class="form-control" id="txtMemberEmail" maxlength="100" placeholder="Member Email" autocomplete="off">
+                <input type="text" class="form-control" id="txtMemberEmail" maxlength="100" placeholder="Member Email" rule="{'Please enter Email','required'}" autocomplete="off">
             </div>
-            <button type="submit" class="btn btn-success mr-2" id="btnAddTeam">Add Team</button>
-            <button class="btn btn-light">Cancel</button>
+            <button class="btn btn-success mr-2" id="btnAddMainSkill" onclick="saveMainSkill();">SAVE</button>
+            <button class="btn btn-light" data-dismiss="modal">CANCEL</button>
         </div>
     </div>
 </div>
