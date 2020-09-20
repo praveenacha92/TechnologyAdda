@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TechnologyADDA.Models
+﻿namespace TechnologyADDA.Models
 {
-    public class MainSkill
+    public class MainSkill : AuditCommon
     {
+        public int Id { get; set; }
 
+        public string MainSkillName { get; set; }
+
+        public string MainSkillDesctiption { get; set; }
     }
 }

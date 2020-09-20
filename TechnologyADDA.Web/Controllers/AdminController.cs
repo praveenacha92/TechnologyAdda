@@ -15,13 +15,32 @@
         #region Actions
         public JsonResult AddMainSkill()
         {
-            var htmlMainSkill = CustomPartialView.RenderPartialViewToString(this,Enums.PartialView.AddEditMainSkill, new MainSkill());
-            return Json(htmlMainSkill,JsonRequestBehavior.AllowGet);
+            string htmlMainSkill = CustomPartialView.RenderPartialViewToString(this, Enums.PartialView.AddEditMainSkill, new MainSkill());
+            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.Actions.Add,Enums.ScreenNames.MainSkill)}, JsonRequestBehavior.AllowGet);
         }
         public JsonResult EditMainSkill()
         {
-            var htmlMainSkill = CustomPartialView.RenderPartialViewToString(this, Enums.PartialView.AddEditMainSkill, new MainSkill());
-            return Json(htmlMainSkill, JsonRequestBehavior.AllowGet);
+            MainSkill mainSkill = new MainSkill();
+            mainSkill.MainSkillName = "Test";
+            mainSkill.MainSkillDesctiption = "Test Desc";
+
+            var htmlMainSkill = CustomPartialView.RenderPartialViewToString(this, Enums.PartialView.AddEditMainSkill, mainSkill);
+            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.Actions.Edit, Enums.ScreenNames.MainSkill) }, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult SaveMainSkill()
+        {
+            return Json("");
+        }
+
+        public JsonResult UpdateMainSkill()
+        {
+            return Json("");
+        }
+
+        public JsonResult DeleteMainSkill(int Id)
+        {
+            return Json("");
         }
         #endregion
     }

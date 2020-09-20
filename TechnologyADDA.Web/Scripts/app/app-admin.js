@@ -3,23 +3,43 @@ function addMainSkill() {
     $.ajax({
         type: 'POST',
         cache: false,
-        url: '/Admin/AddMainSkill/',
-        success: function (data) {
-            if (data != null)
-                appendHtmlToModalBody(data);
+        url: ajaxUrl.addpopupmainksill,
+        success: function (data, status) {
+            if (data.modalBodyHtml != null)
+                appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            failureAlert('Failure');
+
         }
     })
 }
+
+function editMainSkill(id) {
+    $.ajax({
+        type: 'POST',
+        cache: false,
+        url: ajaxUrl.editpopupmainksill,
+        success: function (data, status) {
+            if (data.modalBodyHtml != null)
+                appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+
+        }
+    })
+}
+
+function deleteConfirmMainSkill(id) {
+    deleteCommon(id, ajaxUrl.deletemainskill);
+}
+
 
 function saveMainSkill() {
     if ($ec.validate("dvMainSkill", $ec.ruleCallback, "")) {
         $.ajax({
             type: 'POST',
             cache: false,
-            url: '/Account/UserLogin',
+            url: ajaxUrl.savemainskill,
             data: { 'userLogin': userLoginObject },
             success: function (data, textStatus, jqXHR) {
 

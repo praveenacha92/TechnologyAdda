@@ -12,6 +12,7 @@
         public class FilePaths
         {
             public const string XmlPath = "~/App_Data/AppMessages.xml";
+            public const string LogFilePath = "~/App_Data/Log/Log.txt";
         }
 
         public class PartialView
@@ -44,6 +45,18 @@
         public class ApiUrls
         {
             public const string UserRegistration = "UserAccount/CreateUserRegistration";
+        }
+
+        public class Actions
+        {
+            public const string Add = "Add";
+            public const string Edit = "Edit";
+            public const string Delete = "Delete";
+        }
+
+        public class ScreenNames
+        {
+            public const string MainSkill = "Main Skill";
         }
     }
 }

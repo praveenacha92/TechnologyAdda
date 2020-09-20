@@ -30,5 +30,10 @@
             result = result.Replace("@Action", action);
             return result;
         }
+
+        public static string GetModalActionHeader(string action, string screenName)
+        {
+            return action + " " + screenName;
+        }
     }
 }

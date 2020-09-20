@@ -3,18 +3,13 @@
 <div class="card" id="dvMainSkill">
     <div class="row">
         <div class="col-12">
-            <h2>Create Your Team</h2><br />
             <div class="form-group">
-                <label>Member EmpId</label>
-                <input type="text" class="form-control" id="txtMemberEmpId" maxlength="160" placeholder="Member EmpId" rule="{'Please enter Username','required'}" autocomplete="off">
+                <label>Main Skill</label>
+                <input type="text" class="form-control" id="txtMainSkill" value="@Model.MainSkillName" maxlength="160" placeholder="Main Skill" rule="{'Please enter Main Skill','required'}" autocomplete="off">
             </div>
             <div class="form-group">
-                <label>Member Name</label>
-                <input type="text" class="form-control" id="txtMemberName" maxlength="100" placeholder="Member Name" rule="{'Please enter Password','required'}" autocomplete="off">
-            </div>
-            <div class="form-group">
-                <label>Member Email</label>
-                <input type="text" class="form-control" id="txtMemberEmail" maxlength="100" placeholder="Member Email" rule="{'Please enter Email','required'}" autocomplete="off">
+                <label>Main Skill Description</label>
+                <textarea type="text" class="form-control" id="txtMainSkillDesc" value="@Model.MainSkillDesctiption" maxlength="500" placeholder="Main Skill Description" autocomplete="off"></textarea>
             </div>
             <button class="btn btn-success mr-2" id="btnAddMainSkill" onclick="saveMainSkill();">SAVE</button>
             <button class="btn btn-light" data-dismiss="modal">CANCEL</button>
