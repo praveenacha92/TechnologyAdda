@@ -5,7 +5,7 @@
 
     public class ApplicationConfig
     {
-        private static string _connectionKey = "dbKnsConnection";
+        private static string _connectionKey = "dbTechConnection";
         public static string GetAppSettingsValue()
         {
             string sValue = string.Empty;

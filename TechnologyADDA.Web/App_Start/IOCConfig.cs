@@ -11,6 +11,7 @@
         {
             var container = new UnityContainer();
             container.RegisterType<IAccountService, AccountService>();
+            container.RegisterType<IAdminService, AdminService>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

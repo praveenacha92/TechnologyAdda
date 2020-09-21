@@ -36,11 +36,16 @@ function deleteConfirmMainSkill(id) {
 
 function saveMainSkill() {
     if ($ec.validate("dvMainSkill", $ec.ruleCallback, "")) {
+
+        var mainSkillObj = {
+            MainSkillName : "Test"
+        }
+
         $.ajax({
             type: 'POST',
             cache: false,
             url: ajaxUrl.savemainskill,
-            data: { 'userLogin': userLoginObject },
+            data: { 'mainSkill': mainSkillObj },
             success: function (data, textStatus, jqXHR) {
 
             },

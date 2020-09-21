@@ -1,11 +1,18 @@
 ﻿namespace TechnologyADDA.Web.Controllers
 {
     using System.Web.Mvc;
+    using TechnologyADDA.Business;
     using TechnologyADDA.Models;
     using TechnologyADDA.Shared;
 
     public class AdminController : Controller
     {
+        private readonly IAdminService _adminService;
+
+        public AdminController(IAdminService adminService)
+        {
+            _adminService = adminService;
+        }
 
         public ActionResult ManageMainSkill()
         {
@@ -28,8 +35,9 @@
             return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.Actions.Edit, Enums.ScreenNames.MainSkill) }, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult SaveMainSkill()
+        public JsonResult SaveMainSkill(MainSkill mainSkill)
         {
+            _adminService.SaveMainSkill(mainSkill);
             return Json("");
         }
 

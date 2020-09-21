@@ -45,6 +45,9 @@
         public class ApiUrls
         {
             public const string UserRegistration = "UserAccount/CreateUserRegistration";
+
+            public const string SaveMainSkill = "AdminApi/SaveMainSkill";
+
         }
 
         public class Actions

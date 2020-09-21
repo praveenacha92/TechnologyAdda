@@ -29,7 +29,8 @@
                 Content = httpContent
             };
             HttpResponseMessage response = await client.SendAsync(request);
-            return await GetResponseData(response);
+            var result = await GetResponseData(response);
+            return result;
         }
 
         public static async Task<Response<T>> DeleteAsyncRequest(string actionUrl, T data)

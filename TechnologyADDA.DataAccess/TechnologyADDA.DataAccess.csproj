@@ -42,9 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\AccountContext.cs" />
+    <Compile Include="Context\AdminContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TechnologyADDA.Models\TechnologyADDA.Models.csproj">
+      <Project>{682768AD-DDE9-46F1-B35F-FFDA48C05ADC}</Project>
+      <Name>TechnologyADDA.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TechnologyADDA.Shared\TechnologyADDA.Shared.csproj">
       <Project>{1EEFD21E-8923-402B-9F47-FB8626D2E431}</Project>
       <Name>TechnologyADDA.Shared</Name>
