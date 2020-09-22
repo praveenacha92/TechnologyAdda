@@ -6,7 +6,13 @@ const ajaxUrl = {
     editpopupmainksill: '/Admin/EditMainSkill/',
     savemainskill: '/Admin/SaveMainSkill/',
     updatemainskill: '/Admin/UpdateMainSkill/',
-    deletemainskill: '/Admin/DeleteMainSkill/'
+    deletemainskill: '/Admin/DeleteMainSkill/',
+
+    addpopupchildksill: '/Admin/AddChildSkill/',
+    editpopupchildksill: '/Admin/EditChildSkill/',
+    savechildskill: '/Admin/SaveChildSkill/',
+    updatechildskill: '/Admin/UpdateChildSkill/',
+    deletechildskill: '/Admin/DeleteChildSkill/'
 
 
     //public related urls

@@ -21,6 +21,8 @@
             //Admin
             public const string AdminLeftSidePanel = "~/Views/Admin/_AdminLeftSidePanel.cshtml";
             public const string AddEditMainSkill = "~/Views/Admin/_CreateEditMainSkill.cshtml";
+            public const string AddEditChildSkill = "~/Views/Admin/_CreateEditChildSkill.cshtml";
+
 
 
             //Account
@@ -60,6 +62,7 @@
         public class ScreenNames
         {
             public const string MainSkill = "Main Skill";
+            public const string ChildSkill = "Child Skill";
         }
     }
 }

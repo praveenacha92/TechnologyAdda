@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildSkill.cs" />
     <Compile Include="MainSkill.cs" />
     <Compile Include="UserAccount.cs" />
     <Compile Include="AuditCommon.cs" />

@@ -271,7 +271,7 @@
     <Content Include="Views\Admin\_AdminLeftSidePanel.cshtml" />
     <Content Include="Views\Public\TopicContent.cshtml" />
     <Content Include="Views\Admin\_CreateEditMainSkill.cshtml" />
-    <Content Include="Views\Admin\CreateChildSkill.cshtml" />
+    <Content Include="Views\Admin\_CreateEditChildSkill.cshtml" />
     <Content Include="Views\Shared\_ModalPopUp.cshtml" />
     <Content Include="Views\Admin\ManageChildSkill.cshtml" />
     <Content Include="Views\Admin\ManageMainSkill.cshtml" />

@@ -55,3 +55,60 @@ function saveMainSkill() {
         });
     }
 }
+
+
+function addChildSkill() {
+    $.ajax({
+        type: 'POST',
+        cache: false,
+        url: ajaxUrl.addpopupchildksill,
+        success: function (data, status) {
+            if (data.modalBodyHtml != null)
+                appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+
+        }
+    })
+}
+
+function editChildSkill(id) {
+    $.ajax({
+        type: 'POST',
+        cache: false,
+        url: ajaxUrl.editpopupchildksill,
+        success: function (data, status) {
+            if (data.modalBodyHtml != null)
+                appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+
+        }
+    })
+}
+
+function deleteConfirmChildSkill(id) {
+    deleteCommon(id, ajaxUrl.deletechildskill);
+}
+
+function saveChildSkill() {
+    if ($ec.validate("dvChildSkill", $ec.ruleCallback, "")) {
+
+        var mainSkillObj = {
+            MainSkillName: "Test"
+        }
+
+        $.ajax({
+            type: 'POST',
+            cache: false,
+            url: ajaxUrl.savemainskill,
+            data: { 'mainSkill': mainSkillObj },
+            success: function (data, textStatus, jqXHR) {
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+
+            }
+        });
+    }
+}
