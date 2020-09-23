@@ -13,19 +13,27 @@
                     <option>--Select--</option>
                     <option>Dot Net</option>
                     @*@{
-                        if (ViewBag.Roles != null)
-                        {
-                            foreach (var data in ViewBag.Roles)
+                            if (ViewBag.Roles != null)
                             {
-                                <option value="@data.Id">@data.RoleName</option>
+                                foreach (var data in ViewBag.Roles)
+                                {
+                                    <option value="@data.Id">@data.RoleName</option>
+                                }
                             }
-                        }
-                    }*@
+                        }*@
                 </select>
             </div>
             <div class="form-group">
                 <label>Child Skill Description</label>
                 <textarea type="text" class="form-control" id="txtMainSkillDesc" value="@Model.ChildSkillDesctiption" maxlength="500" placeholder="Child Skill Description" autocomplete="off"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="form-check form-check-flat">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" checked=""> Active
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
             </div>
             <button class="btn btn-success mr-2" id="btnAddMainSkill" onclick="saveChildSkill();">SAVE</button>
             <button class="btn btn-light" data-dismiss="modal">CANCEL</button>

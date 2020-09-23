@@ -1,46 +1,31 @@
 ﻿namespace TechnologyADDA.Web.Controllers
 {
-    using System;
     using System.Web.Mvc;
-    using TechnologyADDA.Business;
     using TechnologyADDA.Models;
     using TechnologyADDA.Shared;
 
+    [CustomException]
     public class AccountController : Controller
     {
-        private readonly IAccountService _accountService;
-
         #region Constructor
-        public AccountController(IAccountService accountService)
+        public AccountController()
         {
-            if (this._accountService == null)
-            {
-                this._accountService = accountService;
-            }
+           
         }
         #endregion
 
         #region Views
-        public ActionResult Login(string userName)
-        {
-            return View();
-        }
-
         public ActionResult Register()
-        {
-            return View();
-        }
-
-        public ActionResult UserRole()
         {
             return View();
         }
         #endregion
 
         #region Action Methods
-        public JsonResult UserRegister(UserAccount userAccount)
+        public JsonResult LoginModalPopUp()
         {
-            return Json("");
+            string htmlMainSkill = CustomPartialView.RenderPartialViewToString(this, Enums.PartialView.Login, new UserLogin());
+            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.ScreenNames.Login) }, JsonRequestBehavior.AllowGet);
         }
         #endregion
     }

@@ -1,0 +1,36 @@
+﻿@model TechnologyADDA.Models.SubTopic
+
+<div class="card" id="dvSubTopic">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label>Sub Topic Name<span class="required-star"><b>*</b></span></label>
+                <input type="text" class="form-control" id="txtMainSkill" maxlength="160" placeholder="Main Skill" rule="{'Please enter Main Skill','required'}" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label class="label">Choose Main Topics</label>
+                <div class="input-group">
+                    <select class="form-control" id="ddlUserRole">
+                        <option>Select Main Topic</option>
+                        <option value="1">CLR</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Sub Topic Description</label>
+                <textarea type="text" class="form-control" id="txtMainSkillDesc" maxlength="500" placeholder="Main Skill Description" autocomplete="off"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="form-check form-check-flat">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" checked=""> Active
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn-success mr-2" id="btnAddMainSkill" onclick="saveSubTopic();">SAVE</button>
+            <button class="btn btn-light" data-dismiss="modal">CANCEL</button>
+        </div>
+    </div>
+</div>
+

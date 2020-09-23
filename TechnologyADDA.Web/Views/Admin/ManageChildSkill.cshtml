@@ -5,9 +5,9 @@
 <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            <h2>Manage Child Skill</h2>
+            <h2>Manage Child Skills</h2>
             <div class="table-responsive">
-                <button type="submit" class="btn btn-primary mr-2 float-right" onclick="addChildSkill()">+ New</button>
+                <button type="submit" class="btn btn-info mr-2 float-right" onclick="addChildSkill()">+ New</button>
                 <br />
                 <table class="table table-striped">
                     <thead>
@@ -20,6 +20,9 @@
                             </th>
                             <th>
                                 Child Skill Description
+                            </th>
+                            <th>
+                                Active
                             </th>
                             <th>
                                 Actions
@@ -36,6 +39,12 @@
                             </td>
                             <td>
                                 C# Desc
+                            </td>
+                            <td>
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" checked="">
+                                    <i class="input-helper"></i>
+                                </label>
                             </td>
                             <td>
                                 <i class="menu-icon mdi mdi-pencil action-icon-size" onclick="editChildSkill()"></i>

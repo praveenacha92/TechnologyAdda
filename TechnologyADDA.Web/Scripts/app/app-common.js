@@ -12,11 +12,23 @@ const ajaxUrl = {
     editpopupchildksill: '/Admin/EditChildSkill/',
     savechildskill: '/Admin/SaveChildSkill/',
     updatechildskill: '/Admin/UpdateChildSkill/',
-    deletechildskill: '/Admin/DeleteChildSkill/'
+    deletechildskill: '/Admin/DeleteChildSkill/',
 
+    addpopuptopic: '/Admin/AddTopic/',
+    editpopuptopic: '/Admin/EditTopic/',
+    savetopic: '/Admin/SaveTopic/',
+    updatetopic: '/Admin/UpdateTopic/',
+    deletetopic: '/Admin/DeleteTopic/',
 
+    addpopupsubtopic: '/Admin/AddSubTopic/',
+    editpopupsubtopic: '/Admin/EditSubTopic/',
+    savesubtopic: '/Admin/SaveSubTopic/',
+    updatesubtopic: '/Admin/UpdateSubTopic/',
+    deletesubtopic: '/Admin/DeleteSubTopic/',
     //public related urls
 
+    //user account
+    loginpopup: '/Account/LoginModalPopUp/'
 }
 
 
@@ -59,3 +71,4 @@ function deleteItem(id, url) {
         }
     })
 }
+

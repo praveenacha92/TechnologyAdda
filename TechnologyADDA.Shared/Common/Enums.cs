@@ -22,9 +22,11 @@
             public const string AdminLeftSidePanel = "~/Views/Admin/_AdminLeftSidePanel.cshtml";
             public const string AddEditMainSkill = "~/Views/Admin/_CreateEditMainSkill.cshtml";
             public const string AddEditChildSkill = "~/Views/Admin/_CreateEditChildSkill.cshtml";
+            public const string AddEditTopic = "~/Views/Admin/_CreateEditTopic.cshtml";
+            public const string AddEditSubTopic = "~/Views/Admin/_CreateEditSubTopic.cshtml";
 
 
-
+           
             //Account
             public const string Login = "~/Views/Account/Login.cshtml";
 
@@ -63,6 +65,9 @@
         {
             public const string MainSkill = "Main Skill";
             public const string ChildSkill = "Child Skill";
+            public const string MainTopic = "Main Topic";
+            public const string SubTopic = "Sub Topic";
+            public const string Login = "Login";
         }
     }
 }

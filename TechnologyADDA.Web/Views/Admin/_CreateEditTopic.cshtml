@@ -1,0 +1,27 @@
+﻿@model TechnologyADDA.Models.MainTopic
+
+<div class="card" id="dvTopic">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label>Main Topic Name<span class="required-star"><b>*</b></span></label>
+                <input type="text" class="form-control" id="txtMainSkill" maxlength="160" placeholder="Main Skill" rule="{'Please enter Main Skill','required'}" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>Main Topic Description</label>
+                <textarea type="text" class="form-control" id="txtMainSkillDesc" maxlength="500" placeholder="Main Skill Description" autocomplete="off"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="form-check form-check-flat">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" checked=""> Active
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn-success mr-2" id="btnAddMainSkill" onclick="saveTopic();">SAVE</button>
+            <button class="btn btn-light" data-dismiss="modal">CANCEL</button>
+        </div>
+    </div>
+</div>
+

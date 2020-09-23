@@ -31,7 +31,7 @@
             return result;
         }
 
-        public static string GetModalActionHeader(string action, string screenName)
+        public static string GetModalActionHeader(string screenName,string action = "")
         {
             return action + " " + screenName;
         }

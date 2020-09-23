@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h2>Manage Topics</h2>
+            <div class="table-responsive">
+                <button type="submit" class="btn btn-info mr-2 float-right" onclick="addTopic()">+ New</button>
+                <br />
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Topic Name
+                            </th>
+                            <th>
+                                Topic Description
+                            </th>
+                            <th>
+                                Active
+                            </th>
+                            <th>
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                CLR Info
+                            </td>
+                            <td>
+                                CLR Info breif
+                            </td>
+                            <td>
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" checked="">
+                                    <i class="input-helper"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <i class="menu-icon mdi mdi-pencil action-icon-size" onclick="editTopic()"></i>
+                                &nbsp;&nbsp;<i class="menu-icon mdi mdi-close-box action-icon-size" onclick="deleteConfirmTopic('1');"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
