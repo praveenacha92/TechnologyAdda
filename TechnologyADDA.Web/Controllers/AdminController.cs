@@ -15,6 +15,12 @@
             _adminService = adminService;
         }
 
+        public ActionResult AdminDashBoard()
+        {
+            return View();
+        }
+
+
         public ActionResult ManageMainSkill()
         {
             return View();
@@ -31,6 +37,11 @@
         }
 
         public ActionResult ManageSubTopic()
+        {
+            return View();
+        }
+
+        public ActionResult ManageSkillContent()
         {
             return View();
         }

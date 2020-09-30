@@ -173,7 +173,6 @@
     <Compile Include="App_Start\WebApiConfig2.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\DashBoardController.cs" />
     <Compile Include="Controllers\PublicController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -256,15 +255,8 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\UserRole.cshtml" />
     <Content Include="Views\Admin\CreateSessionLead.cshtml" />
-    <Content Include="Views\DashBoard\CreateTeam.cshtml" />
-    <Content Include="Views\DashBoard\DashboardLand.cshtml" />
-    <Content Include="Views\DashBoard\ManageSessions.cshtml" />
-    <Content Include="Views\DashBoard\ScheduleSession.cshtml" />
-    <Content Include="Views\DashBoard\SessionsHistory.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\DashBoard\_LeftSidePanel.cshtml" />
-    <Content Include="Views\DashBoard\_RightSideContentPanel.cshtml" />
     <Content Include="Views\Shared\_FooterSection.cshtml" />
     <Content Include="Views\Shared\_HeaderSection.cshtml" />
     <Content Include="Views\Public\_PublicLeftSidePanel.cshtml" />
@@ -279,6 +271,12 @@
     <Content Include="Views\Admin\ManageSubTopic.cshtml" />
     <Content Include="Views\Admin\_CreateEditTopic.cshtml" />
     <Content Include="Views\Admin\_CreateEditSubTopic.cshtml" />
+    <Content Include="Views\Public\PublicDashBoard.cshtml" />
+    <Content Include="Views\Public\_TopTrendingNews.cshtml" />
+    <Content Include="Views\Admin\AdminDashBoard.cshtml" />
+    <Content Include="Views\Public\CourseInformation.cshtml" />
+    <Content Include="Views\Public\_MainSkills.cshtml" />
+    <Content Include="Views\Admin\ManageSkillContent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TechnologyADDA.Business\TechnologyADDA.Business.csproj">

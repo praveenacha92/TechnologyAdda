@@ -6,7 +6,12 @@
     {
         #region Views
         // GET: Public
-        public ActionResult Index()
+        public ActionResult PublicDashBoard()
+        {
+            return View();
+        }
+
+        public ActionResult CourseInformation()
         {
             return View();
         }

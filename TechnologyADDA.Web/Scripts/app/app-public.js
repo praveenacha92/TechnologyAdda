@@ -9,3 +9,7 @@
         $(this).addClass("navbar-li-active");
     });
 });
+
+function redirectCourseInfo(controller, action) {
+    window.location.href = `${controller}/${action}`;
+}

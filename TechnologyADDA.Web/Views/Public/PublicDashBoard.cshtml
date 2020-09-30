@@ -1,18 +1,13 @@
 ﻿@using TechnologyADDA.Shared
 
 <div class="container-scroller">
-    <!-- partial:partials/_navbar.html -->
     @Html.Partial(Enums.PartialView.HeaderSecion)
-    <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_sidebar.html -->
-        @Html.Partial(Enums.PartialView.LeftSidePanel)
-        <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper">
                 <div id="divLoadChildView">
-                    @Html.Partial(Enums.PartialView.RightSideContentPanel)
-                    @Html.Partial(Enums.PartialView.RightSideContentPanel)
+                    @Html.Partial(Enums.PartialView.MainSkills)
+                    @Html.Partial(Enums.PartialView.MainSkills)
                 </div>
             </div>
             <!-- content-wrapper ends -->
@@ -20,7 +15,6 @@
             @Html.Partial(Enums.PartialView.FooterSecion)
             <!-- partial -->
         </div>
-        <!-- main-panel ends -->
+         @Html.Partial(Enums.PartialView.TopTrendingNews)
     </div>
-    <!-- page-body-wrapper ends -->
 </div>

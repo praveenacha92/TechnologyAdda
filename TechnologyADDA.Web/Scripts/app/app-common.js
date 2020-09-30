@@ -2,33 +2,33 @@
 
 const ajaxUrl = {
     //admin related urls
-    addpopupmainksill: '/Admin/AddMainSkill/',
-    editpopupmainksill: '/Admin/EditMainSkill/',
-    savemainskill: '/Admin/SaveMainSkill/',
-    updatemainskill: '/Admin/UpdateMainSkill/',
-    deletemainskill: '/Admin/DeleteMainSkill/',
+    ADDPOPUPMAINKSILL: '/Admin/AddMainSkill/',
+    EDITPOPUPMAINKSILL: '/Admin/EditMainSkill/',
+    SAVEMAINSKILL: '/Admin/SaveMainSkill/',
+    UPDATEMAINSKILL: '/Admin/UpdateMainSkill/',
+    DELETEMAINSKILL: '/Admin/DeleteMainSkill/',
 
-    addpopupchildksill: '/Admin/AddChildSkill/',
-    editpopupchildksill: '/Admin/EditChildSkill/',
-    savechildskill: '/Admin/SaveChildSkill/',
-    updatechildskill: '/Admin/UpdateChildSkill/',
-    deletechildskill: '/Admin/DeleteChildSkill/',
+    ADDPOPUPCHILDKSILL: '/Admin/AddChildSkill/',
+    EDITPOPUPCHILDKSILL: '/Admin/EditChildSkill/',
+    SAVECHILDSKILL: '/Admin/SaveChildSkill/',
+    UPDATECHILDSKILL: '/Admin/UpdateChildSkill/',
+    DELETECHILDSKILL: '/Admin/DeleteChildSkill/',
 
-    addpopuptopic: '/Admin/AddTopic/',
-    editpopuptopic: '/Admin/EditTopic/',
-    savetopic: '/Admin/SaveTopic/',
-    updatetopic: '/Admin/UpdateTopic/',
-    deletetopic: '/Admin/DeleteTopic/',
+    ADDPOPUPTOPIC: '/Admin/AddTopic/',
+    EDITPOPUPTOPIC: '/Admin/EditTopic/',
+    SAVETOPIC: '/Admin/SaveTopic/',
+    UPDATETOPIC: '/Admin/UpdateTopic/',
+    DELETETOPIC: '/Admin/DeleteTopic/',
 
-    addpopupsubtopic: '/Admin/AddSubTopic/',
-    editpopupsubtopic: '/Admin/EditSubTopic/',
-    savesubtopic: '/Admin/SaveSubTopic/',
-    updatesubtopic: '/Admin/UpdateSubTopic/',
-    deletesubtopic: '/Admin/DeleteSubTopic/',
+    ADDPOPUPSUBTOPIC: '/Admin/AddSubTopic/',
+    EDITPOPUPSUBTOPIC: '/Admin/EditSubTopic/',
+    SAVESUBTOPIC: '/Admin/SaveSubTopic/',
+    UPDATESUBTOPIC: '/Admin/UpdateSubTopic/',
+    DELETESUBTOPIC: '/Admin/DeleteSubTopic/',
     //public related urls
 
     //user account
-    loginpopup: '/Account/LoginModalPopUp/'
+    LOGINPOPUP: '/Account/LoginModalPopUp/'
 }
 
 

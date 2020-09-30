@@ -26,20 +26,22 @@
             public const string AddEditSubTopic = "~/Views/Admin/_CreateEditSubTopic.cshtml";
 
 
-           
+
+
             //Account
             public const string Login = "~/Views/Account/Login.cshtml";
 
             //Public
             public const string PublicLeftSidePanel = "~/Views/Public/_PublicLeftSidePanel.cshtml";
+            public const string TopTrendingNews = "~/Views/Public/_TopTrendingNews.cshtml";
+            public const string TopicContent = "~/Views/Public/TopicContent.cshtml";
+            public const string MainSkills = "~/Views/Public/_MainSkills.cshtml";
 
-            //DashBoard
-            public const string LeftSidePanel = "~/Views/Dashboard/_LeftSidePanel.cshtml";
-            public const string RightSideContentPanel = "~/Views/Dashboard/_RightSideContentPanel.cshtml";
 
             //Shared
             public const string HeaderSecion = "~/Views/Shared/_HeaderSection.cshtml";
             public const string FooterSecion = "~/Views/Shared/_FooterSection.cshtml";
+            public const string LeftSidePanel = "~/Views/Shared/_LeftSidePanel.cshtml";
 
             //Common
             public const string ModalPopUp = "~/Views/Shared/_ModalPopUp.cshtml";

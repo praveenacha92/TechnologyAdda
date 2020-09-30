@@ -3,7 +3,7 @@ function addMainSkill() {
     $.ajax({
         type: 'POST',
         cache: false,
-        url: ajaxUrl.addpopupmainksill,
+        url: ajaxUrl.ADDPOPUPMAINKSILL,
         success: function (data, status) {
             if (data.modalBodyHtml != null)
                 appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
@@ -18,7 +18,7 @@ function editMainSkill(id) {
     $.ajax({
         type: 'POST',
         cache: false,
-        url: ajaxUrl.editpopupmainksill,
+        url: ajaxUrl.EDITPOPUPMAINKSILL,
         success: function (data, status) {
             if (data.modalBodyHtml != null)
                 appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
@@ -30,7 +30,7 @@ function editMainSkill(id) {
 }
 
 function deleteConfirmMainSkill(id) {
-    deleteCommon(id, ajaxUrl.deletemainskill);
+    deleteCommon(id, ajaxUrl.DELETEMAINSKILL);
 }
 
 function saveMainSkill() {
@@ -43,7 +43,7 @@ function saveMainSkill() {
         $.ajax({
             type: 'POST',
             cache: false,
-            url: ajaxUrl.savemainskill,
+            url: ajaxUrl.SAVEMAINSKILL,
             data: { 'mainSkill': mainSkillObj },
             success: function (data, textStatus, jqXHR) {
 
@@ -60,7 +60,7 @@ function addChildSkill() {
     $.ajax({
         type: 'POST',
         cache: false,
-        url: ajaxUrl.addpopupchildksill,
+        url: ajaxUrl.ADDPOPUPCHILDKSILL,
         success: function (data, status) {
             if (data.modalBodyHtml != null)
                 appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
@@ -75,7 +75,7 @@ function editChildSkill(id) {
     $.ajax({
         type: 'POST',
         cache: false,
-        url: ajaxUrl.editpopupchildksill,
+        url: ajaxUrl.EDITPOPUPCHILDKSILL,
         success: function (data, status) {
             if (data.modalBodyHtml != null)
                 appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
@@ -87,7 +87,7 @@ function editChildSkill(id) {
 }
 
 function deleteConfirmChildSkill(id) {
-    deleteCommon(id, ajaxUrl.deletechildskill);
+    deleteCommon(id, ajaxUrl.DELETECHILDSKILL);
 }
 
 function saveChildSkill() {
@@ -100,7 +100,7 @@ function saveChildSkill() {
         $.ajax({
             type: 'POST',
             cache: false,
-            url: ajaxUrl.savemainskill,
+            url: ajaxUrl.SAVEMAINSKILL,
             data: { 'mainSkill': mainSkillObj },
             success: function (data, textStatus, jqXHR) {
 
@@ -117,7 +117,7 @@ function addTopic() {
     $.ajax({
         type: 'POST',
         cache: false,
-        url: ajaxUrl.addpopuptopic,
+        url: ajaxUrl.ADDPOPUPTOPIC,
         success: function (data, status) {
             if (data.modalBodyHtml != null)
                 appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
@@ -132,7 +132,7 @@ function editTopic(id) {
     $.ajax({
         type: 'POST',
         cache: false,
-        url: ajaxUrl.editpopuptopic,
+        url: ajaxUrl.EDITPOPUPTOPIC,
         success: function (data, status) {
             if (data.modalBodyHtml != null)
                 appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
@@ -144,7 +144,7 @@ function editTopic(id) {
 }
 
 function deleteConfirmTopic(id) {
-    deleteCommon(id, ajaxUrl.deletechildskill);
+    deleteCommon(id, ajaxUrl.DELETECHILDSKILL);
 }
 
 function saveTopic() {
@@ -152,7 +152,7 @@ function saveTopic() {
         $.ajax({
             type: 'POST',
             cache: false,
-            url: ajaxUrl.saveTopic,
+            url: ajaxUrl.SAVETOPIC,
           //  data: { 'mainSkill': mainSkillObj },
             success: function (data, textStatus, jqXHR) {
 
@@ -169,7 +169,7 @@ function addSubTopic() {
     $.ajax({
         type: 'POST',
         cache: false,
-        url: ajaxUrl.addpopupsubtopic,
+        url: ajaxUrl.ADDPOPUPSUBTOPIC,
         success: function (data, status) {
             if (data.modalBodyHtml != null)
                 appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
@@ -184,7 +184,7 @@ function editSubTopic(id) {
     $.ajax({
         type: 'POST',
         cache: false,
-        url: ajaxUrl.editpopupsubtopic,
+        url: ajaxUrl.EDITPOPUPSUBTOPIC,
         success: function (data, status) {
             if (data.modalBodyHtml != null)
                 appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
@@ -196,7 +196,7 @@ function editSubTopic(id) {
 }
 
 function deleteConfirmSubTopic(id) {
-    deleteCommon(id, ajaxUrl.deletechildskill);
+    deleteCommon(id, ajaxUrl.DELETECHILDSKILL);
 }
 
 function saveSubTopic() {
@@ -204,7 +204,7 @@ function saveSubTopic() {
         $.ajax({
             type: 'POST',
             cache: false,
-            url: ajaxUrl.savesubtopic,
+            url: ajaxUrl.SAVESUBTOPIC,
             //  data: { 'mainSkill': mainSkillObj },
             success: function (data, textStatus, jqXHR) {
 
@@ -215,3 +215,10 @@ function saveSubTopic() {
         });
     }
 }
+
+$(document).ready(function () {
+    $('.nav li').click(function () {
+        $('li.nav-item.active').removeClass("active");
+        $(this).addClass("active");
+    });
+});

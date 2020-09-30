@@ -1,0 +1,18 @@
+﻿@using TechnologyADDA.Shared
+
+<div class="container-scroller">
+    @Html.Partial(Enums.PartialView.HeaderSecion)
+    <div class="container-fluid page-body-wrapper mt-4">
+        <nav class="sidebar sidebar-offcanvas mt-3" id="sidebar">
+            @Html.Partial(Enums.PartialView.AdminLeftSidePanel)
+        </nav>
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div id="divLoadChildView">
+
+                </div>
+            </div>
+            @Html.Partial(Enums.PartialView.FooterSecion)
+        </div>
+    </div>
+</div>
