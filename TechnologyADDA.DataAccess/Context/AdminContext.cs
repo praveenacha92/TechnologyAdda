@@ -23,8 +23,11 @@ namespace TechnologyADDA.DataAccess
         {
             try
             {
-              var success =  SqlDBHelper.ExecuteNonQuery(_connection, StoredProcedures.sp_CreateMainSkill,
-                  mainSkill);
+                 object[] param = { mainSkill.MainSkillName,
+                            mainSkill.MainSkillDesctiption,
+                           mainSkill.Active   };
+                var success =  SqlDBHelper.ExecuteNonQuery(_connection, StoredProcedures.sp_CreateMainSkill,
+                  param);
             }
             catch(Exception ex)
             {
