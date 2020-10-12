@@ -19,21 +19,22 @@ namespace TechnologyADDA.DataAccess
             _connection = new SqlConnection(ApplicationConfig.GetAppSettingsValue());
         }
 
-        public MainSkill SaveMainSkill(MainSkill mainSkill)
+        public int SaveMainSkill(MainSkill mainSkill)
         {
+            int success = 0;
             try
             {
                  object[] param = { mainSkill.MainSkillName,
                             mainSkill.MainSkillDesctiption,
                            mainSkill.Active   };
-                var success =  SqlDBHelper.ExecuteNonQuery(_connection, StoredProcedures.sp_CreateMainSkill,
+                 success =  SqlDBHelper.ExecuteNonQuery(_connection, StoredProcedures.sp_CreateMainSkill,
                   param);
             }
             catch(Exception ex)
             {
 
             }
-            return mainSkill;
+            return success;
         }
     }
 }

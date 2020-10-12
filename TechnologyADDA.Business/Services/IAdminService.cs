@@ -4,6 +4,6 @@
 
     public interface IAdminService
     {
-        MainSkill SaveMainSkill(MainSkill mainSkill);
+        Result<MainSkill> SaveMainSkill(MainSkill mainSkill);
     }
 }

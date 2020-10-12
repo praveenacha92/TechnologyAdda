@@ -37,7 +37,7 @@ function saveMainSkill() {
     if ($ec.validate("dvMainSkill", $ec.ruleCallback, "")) {
 
         var mainSkillObj = {
-            MainSkillName : "Test"
+            MainSkillName: "Test"
         }
 
         $.ajax({
@@ -46,10 +46,13 @@ function saveMainSkill() {
             url: ajaxUrl.SAVEMAINSKILL,
             data: { 'mainSkill': mainSkillObj },
             success: function (data, textStatus, jqXHR) {
-
+                if (data.Success > 0)
+                    showSnackBar(messages.C);
+                else
+                    showSnackBar(messages.F);
             },
             error: function (jqXHR, textStatus, errorThrown) {
-
+                showSnackBar(messages.E);
             }
         });
     }
@@ -153,7 +156,7 @@ function saveTopic() {
             type: 'POST',
             cache: false,
             url: ajaxUrl.SAVETOPIC,
-          //  data: { 'mainSkill': mainSkillObj },
+            //  data: { 'mainSkill': mainSkillObj },
             success: function (data, textStatus, jqXHR) {
 
             },

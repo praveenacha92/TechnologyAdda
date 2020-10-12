@@ -1,4 +1,13 @@
 ﻿
+const messages = {
+    //c- created u- updated, d- deleted, f- failed, e-internal server
+    C: "Successfully Created",
+    U: "Successfully Updated",
+    D: "Successfully Deleted",
+    F: "Failed",
+    E: "Error Occured",
+
+}
 
 const ajaxUrl = {
     //admin related urls
@@ -70,5 +79,24 @@ function deleteItem(id, url) {
             failureAlert('Failure');
         }
     })
+}
+
+function showSnackBar(messgae) {
+    $('#myModal').modal('hide');
+    let bgColor = '#00ce68';
+    if (messgae == 'E' || messgae == 'F') {
+        bgColor = '#e65251';
+    }
+
+    // Get the snackbar DIV
+    var divSnackbar = document.getElementById("snackbar")
+
+    // Add the "show" class to DIV
+    divSnackbar.className = "show";
+    divSnackbar.innerText = messgae;
+    divSnackbar.style.backgroundColor = bgColor;
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function () { divSnackbar.className = divSnackbar.className.replace("show", ""); }, 4000);
 }
 

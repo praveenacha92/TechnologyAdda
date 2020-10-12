@@ -51,8 +51,9 @@
         public JsonResult AddMainSkill()
         {
             string htmlMainSkill = CustomPartialView.RenderPartialViewToString(this, Enums.PartialView.AddEditMainSkill, new MainSkill());
-            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.ScreenNames.MainSkill,Enums.Actions.Add) }, JsonRequestBehavior.AllowGet);
+            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.ScreenNames.MainSkill, Enums.Actions.Add) }, JsonRequestBehavior.AllowGet);
         }
+
         public JsonResult EditMainSkill()
         {
             MainSkill mainSkill = new MainSkill();
@@ -60,13 +61,13 @@
             mainSkill.MainSkillDesctiption = "Test Desc";
 
             var htmlMainSkill = CustomPartialView.RenderPartialViewToString(this, Enums.PartialView.AddEditMainSkill, mainSkill);
-            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.ScreenNames.MainSkill,Enums.Actions.Edit) }, JsonRequestBehavior.AllowGet);
+            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.ScreenNames.MainSkill, Enums.Actions.Edit) }, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult SaveMainSkill(MainSkill mainSkill)
         {
-            _adminService.SaveMainSkill(mainSkill);
-            return Json("");
+            Result<MainSkill> result = _adminService.SaveMainSkill(mainSkill);
+            return Json(result,JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult UpdateMainSkill()
@@ -84,7 +85,7 @@
         public JsonResult AddChildSkill()
         {
             string htmlMainSkill = CustomPartialView.RenderPartialViewToString(this, Enums.PartialView.AddEditChildSkill, new ChildSkill());
-            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.ScreenNames.ChildSkill,Enums.Actions.Add) }, JsonRequestBehavior.AllowGet);
+            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.ScreenNames.ChildSkill, Enums.Actions.Add) }, JsonRequestBehavior.AllowGet);
         }
         public JsonResult EditChildSkill()
         {
@@ -92,7 +93,7 @@
             childSkill.ChildSkillName = "Test";
 
             var htmlMainSkill = CustomPartialView.RenderPartialViewToString(this, Enums.PartialView.AddEditChildSkill, childSkill);
-            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.ScreenNames.ChildSkill,Enums.Actions.Edit) }, JsonRequestBehavior.AllowGet);
+            return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.ScreenNames.ChildSkill, Enums.Actions.Edit) }, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult SaveChildSkill(MainSkill mainSkill)

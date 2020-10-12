@@ -20,17 +20,18 @@
             }
         }
 
-        public MainSkill SaveMainSkill(MainSkill mainSkill)
+        public Result<MainSkill> SaveMainSkill(MainSkill mainSkill)
         {
+            var result = new Result<MainSkill>();
             try
             {
-                _adminContext.SaveMainSkill(mainSkill);
+                result.Success = _adminContext.SaveMainSkill(mainSkill);
             }
             catch (Exception ex)
             {
 
             }
-            return mainSkill;
+            return result;
         }
     }
 }

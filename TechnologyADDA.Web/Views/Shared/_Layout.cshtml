@@ -1,4 +1,4 @@
-﻿@using  TechnologyADDA.Shared
+﻿@using TechnologyADDA.Shared
 
 <!DOCTYPE html>
 <html>
@@ -16,11 +16,13 @@
 
 </head>
 <body>
+    <div id="snackbar"></div>
     <div class="modal" style="display: none">
         <div class="center">
             <img src="~/Images/loader.gif" />
         </div>
     </div>
+
     @Html.Partial(Enums.PartialView.ModalPopUp);
     @RenderBody()
     @Scripts.Render("~/bundles/jquery")

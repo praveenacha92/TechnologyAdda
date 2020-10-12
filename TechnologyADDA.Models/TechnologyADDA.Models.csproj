@@ -44,6 +44,7 @@
     <Compile Include="ChildSkill.cs" />
     <Compile Include="MainSkill.cs" />
     <Compile Include="MainTopic.cs" />
+    <Compile Include="Result.cs" />
     <Compile Include="SubTopic.cs" />
     <Compile Include="UserAccount.cs" />
     <Compile Include="AuditCommon.cs" />
