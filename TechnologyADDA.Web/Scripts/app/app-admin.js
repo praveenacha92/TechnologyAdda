@@ -47,12 +47,12 @@ function saveMainSkill() {
             data: { 'mainSkill': mainSkillObj },
             success: function (data, textStatus, jqXHR) {
                 if (data.Success > 0)
-                    showSnackBar(messages.C);
+                    showSnackBar(messages.CREATED, data.Success);
                 else
-                    showSnackBar(messages.F);
+                    showSnackBar(messages.FAILED, data.Success);
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                showSnackBar(messages.E);
+                showSnackBar(messages.ERROR);
             }
         });
     }
