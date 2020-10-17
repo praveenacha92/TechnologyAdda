@@ -1,4 +1,4 @@
-﻿
+﻿// main sill
 function addMainSkill() {
     $.ajax({
         type: 'POST',
@@ -15,10 +15,12 @@ function addMainSkill() {
 }
 
 function editMainSkill(id) {
+    isEditFlage = true;
     $.ajax({
         type: 'POST',
         cache: false,
         url: ajaxUrl.EDITPOPUPMAINKSILL,
+        data: { 'id': id },
         success: function (data, status) {
             if (data.modalBodyHtml != null)
                 appendHtmlToModalBody(data.modalBodyHtml, data.modalHeader);
@@ -33,21 +35,31 @@ function deleteConfirmMainSkill(id) {
     deleteCommon(id, ajaxUrl.DELETEMAINSKILL);
 }
 
-function saveMainSkill() {
-    if ($ec.validate("dvMainSkill", $ec.ruleCallback, "")) {
+function saveMainSkill(id) {
+    // id - represent 0 - new, 1- edit
 
+    let actionUrl;
+    if (id == 0)
+        actionUrl = ajaxUrl.SAVEMAINSKILL;
+    else
+        actionUrl = ajaxUrl.UPDATEMAINSKILL;
+
+    if ($ec.validate("dvMainSkill", $ec.ruleCallback, "")) {
         var mainSkillObj = {
-            MainSkillName: "Test"
+            Id: id,
+            MainSkillName: $("#txtMainSkill").val(),
+            MainSkillDesctiption: $("#txtMainSkillDesc").val(),
+            Active: $("input[name=isActive]").is(":checked") ? true : false
         }
 
         $.ajax({
             type: 'POST',
             cache: false,
-            url: ajaxUrl.SAVEMAINSKILL,
+            url: actionUrl,
             data: { 'mainSkill': mainSkillObj },
             success: function (data, textStatus, jqXHR) {
                 if (data.Success > 0)
-                    showSnackBar(messages.CREATED, data.Success);
+                    showSnackBar(id == 0 ? messages.CREATED : messages.UPDATED, data.Success, ajaxUrl.GETMAINSKILL);
                 else
                     showSnackBar(messages.FAILED, data.Success);
             },
@@ -58,7 +70,7 @@ function saveMainSkill() {
     }
 }
 
-
+// child skill
 function addChildSkill() {
     $.ajax({
         type: 'POST',
@@ -96,26 +108,32 @@ function deleteConfirmChildSkill(id) {
 function saveChildSkill() {
     if ($ec.validate("dvChildSkill", $ec.ruleCallback, "")) {
 
-        var mainSkillObj = {
-            MainSkillName: "Test"
+        var childSkillObj = {
+            ChildSkillName: $('#txtChildSkill').val(),
+            ChildSkillDesctiption: $('#txtChildSkillDesc').val(),
+            MainSkillId: $('#ddlMainSkill').val()
         }
 
         $.ajax({
             type: 'POST',
             cache: false,
             url: ajaxUrl.SAVEMAINSKILL,
-            data: { 'mainSkill': mainSkillObj },
+            data: { 'mainSkill': childSkillObj },
             success: function (data, textStatus, jqXHR) {
-
+                if (data.Success > 0)
+                    showSnackBar(messages.CREATED, data.Success);
+                else
+                    showSnackBar(messages.FAILED, data.Success);
             },
             error: function (jqXHR, textStatus, errorThrown) {
-
+                showSnackBar(messages.ERROR);
             }
         });
     }
 }
 
 
+// topics
 function addTopic() {
     $.ajax({
         type: 'POST',
@@ -168,6 +186,7 @@ function saveTopic() {
 }
 
 
+//sub topics
 function addSubTopic() {
     $.ajax({
         type: 'POST',
@@ -219,9 +238,15 @@ function saveSubTopic() {
     }
 }
 
+
+
+
 $(document).ready(function () {
     $('.nav li').click(function () {
         $('li.nav-item.active').removeClass("active");
         $(this).addClass("active");
     });
 });
+
+
+

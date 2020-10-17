@@ -9,17 +9,17 @@
             </div>
             <div class="form-group">
                 <label>Main Skill Description</label>
-                <textarea type="text" class="form-control" id="txtMainSkillDesc" value="@Model.MainSkillDesctiption" maxlength="500" placeholder="Main Skill Description" autocomplete="off"></textarea>
+                <textarea type="text" class="form-control" id="txtMainSkillDesc" value="@Model.MainSkillDesctiption" maxlength="500" placeholder="Main Skill Description" autocomplete="off">@Model.MainSkillDesctiption</textarea>
             </div>
             <div class="form-group">
                 <div class="form-check form-check-flat">
                     <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" checked=""> Active
+                        <input type="checkbox" class="form-check-input" id="=activeSkill" name="isActive" checked="@Model.Active"> Active
                         <i class="input-helper"></i>
                     </label>
                 </div>
             </div>
-            <button class="btn btn-success mr-2" id="btnAddMainSkill" onclick="saveMainSkill();">SAVE</button>
+            <button class="btn btn-success mr-2" id="btnAddMainSkill" onclick="saveMainSkill(@Model.Id);">SAVE</button>
             <button class="btn btn-light" data-dismiss="modal">CANCEL</button>
         </div>
     </div>

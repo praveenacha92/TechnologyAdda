@@ -16,9 +16,17 @@
             }
         }
 
-        public int CreateUserRegistration(UserAccount userAccount)
+        public Result<UserAccount> SaveUserAccount(UserAccount userAccount)
         {
-            throw new NotImplementedException();
+            var result = new Result<UserAccount>();
+            try
+            {
+                result.Success = _accountContext.SaveUserAccount(userAccount);
+            }
+            catch (Exception ex)
+            {
+            }
+            return result;
         }
     }
 }

@@ -5,27 +5,27 @@
         <div class="col-12">
             <div class="form-group">
                 <label>Child Skill<span class="required-star"><b>*</b></span></label>
-                <input type="text" class="form-control" id="txtMainSkill" value="@Model.ChildSkillName" maxlength="160" placeholder="Child Skill" rule="{'Please enter Child Skill','required'}" autocomplete="off">
+                <input type="text" class="form-control" id="txtChildSkill" value="@Model.ChildSkillName" maxlength="160" placeholder="Child Skill" rule="{'Please enter Child Skill','required'}" autocomplete="off">
             </div>
             <div class="form-group">
                 <label>Select Main Skill<span class="required-star"><b>*</b></span></label>
-                <select class="form-control" id="ddlUserRole">
+                <select class="form-control" id="ddlMainSkill">
                     <option>--Select--</option>
                     <option>Dot Net</option>
-                    @*@{
-                            if (ViewBag.Roles != null)
+                    @{
+                        if (ViewBag.MainSkill != null)
+                        {
+                            foreach (var data in ViewBag.MainSkill)
                             {
-                                foreach (var data in ViewBag.Roles)
-                                {
-                                    <option value="@data.Id">@data.RoleName</option>
-                                }
+                                <option value="@data.Key">@data.Value</option>
                             }
-                        }*@
+                        }
+                    }
                 </select>
             </div>
             <div class="form-group">
                 <label>Child Skill Description</label>
-                <textarea type="text" class="form-control" id="txtMainSkillDesc" value="@Model.ChildSkillDesctiption" maxlength="500" placeholder="Child Skill Description" autocomplete="off"></textarea>
+                <textarea type="text" class="form-control" id="txtChildSkillDesc" value="@Model.ChildSkillDesctiption" maxlength="500" placeholder="Child Skill Description" autocomplete="off"></textarea>
             </div>
             <div class="form-group">
                 <div class="form-check form-check-flat">
@@ -35,7 +35,7 @@
                     </label>
                 </div>
             </div>
-            <button class="btn btn-success mr-2" id="btnAddMainSkill" onclick="saveChildSkill();">SAVE</button>
+            <button class="btn btn-success mr-2" onclick="saveChildSkill();">SAVE</button>
             <button class="btn btn-light" data-dismiss="modal">CANCEL</button>
         </div>
     </div>

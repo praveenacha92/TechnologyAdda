@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Context\AccountContext.cs" />
     <Compile Include="Context\AdminContext.cs" />
+    <Compile Include="Context\SharedContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

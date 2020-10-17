@@ -4,6 +4,6 @@
 
     public interface IAccountService
     {
-        int CreateUserRegistration(UserAccount account);
+        Result<UserAccount> SaveUserAccount(UserAccount userAccount);
     }
 }

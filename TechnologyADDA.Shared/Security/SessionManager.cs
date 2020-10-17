@@ -24,5 +24,21 @@
                 HttpContext.Current.Session["Messages"] = value;
             }
         }
+
+        public static string UserName
+        {
+            get
+            {
+                if (HttpContext.Current.Session["UserName"] != null)
+                    return HttpContext.Current.Session["UserName"] as string;
+                else
+                    return null;
+            }
+            set
+            {
+                // HttpContext.Current.Session["UserName"] = value;
+                HttpContext.Current.Session["UserName"] = "pacha";
+            }
+        }
     }
 }

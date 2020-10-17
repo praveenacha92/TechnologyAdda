@@ -16,6 +16,8 @@ const ajaxUrl = {
     SAVEMAINSKILL: '/Admin/SaveMainSkill/',
     UPDATEMAINSKILL: '/Admin/UpdateMainSkill/',
     DELETEMAINSKILL: '/Admin/DeleteMainSkill/',
+    GETMAINSKILL: '/Admin/ManageMainSkill/',
+
 
     ADDPOPUPCHILDKSILL: '/Admin/AddChildSkill/',
     EDITPOPUPCHILDKSILL: '/Admin/EditChildSkill/',
@@ -37,7 +39,9 @@ const ajaxUrl = {
     //public related urls
 
     //user account
-    LOGINPOPUP: '/Account/LoginModalPopUp/'
+    LOGINPOPUP: '/Account/LoginModalPopUp/',
+    SAVEUSERACCOUNT: '/Account/SaveUserAccount/'
+
 }
 
 
@@ -48,9 +52,10 @@ function renderRightSideContent(controller, action) {
         url: '/' + controller + '/' + action,
         success: function (data, textStatus, jqXHR) {
             $('#divLoadChildView').html(data);
+            $("input[name='chkActive']").prop("disabled", true);
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            failureAlert('Failure');
+            
         }
     })
 }
@@ -73,21 +78,24 @@ function deleteItem(id, url) {
         url: url,
         data: { Id: id },
         success: function (data, textStatus, jqXHR) {
-
+            $('#myModalDelete').modal('hide');
+            if (data.Success > 0)
+                showSnackBar(messages.DELETED, data.Success, ajaxUrl.GETMAINSKILL);
+            else
+                showSnackBar(messages.FAILED, data.Success);
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            failureAlert('Failure');
+            showSnackBar(messages.ERROR);
         }
     })
 }
 
-function showSnackBar(messgae, status) {
-    debugger;
-
+function showSnackBar(messgae, status, actionUrl) {
     $('#myModal').modal('hide');
     let bgColor = '#e65251';
-    if (status > 1) {
+    if (status === 1) {
         bgColor = '#00ce68';
+        reloadGrid(actionUrl);
     }
 
     // Get the snackbar DIV
@@ -99,6 +107,17 @@ function showSnackBar(messgae, status) {
     divSnackbar.className = "show";
 
     // After 3 seconds, remove the show class from DIV
-    setTimeout(function () { divSnackbar.className = divSnackbar.className.replace("show", ""); }, 4000);
+    setTimeout(function () { divSnackbar.className = divSnackbar.className.replace("show", ""); }, 3000);
 }
 
+function reloadGrid(actionUrl) {
+    const splittedArray = actionUrl.split("/");
+    const filtered = splittedArray.filter(function (el) {
+        return el != "";
+    });
+    if (filtered != null) {
+        let controller = filtered[0];
+        let action = filtered[1];
+        renderRightSideContent(controller, action);
+    }
+}

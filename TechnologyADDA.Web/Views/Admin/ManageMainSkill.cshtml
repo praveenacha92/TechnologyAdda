@@ -1,4 +1,5 @@
-﻿@{ 
+﻿@model IEnumerable<TechnologyADDA.Models.MainSkill>
+@{
     Layout = null;
 }
 
@@ -27,31 +28,31 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                Dot Net
-                            </td>
-                            <td>
-                                Dot Net Desc
-                            </td>
-                            <td>
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" checked="">
-                                    <i class="input-helper"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <i class="menu-icon mdi mdi-pencil action-icon-size" onclick="editMainSkill()"></i>
-                                &nbsp;&nbsp;<i class="menu-icon mdi mdi-close-box action-icon-size" onclick="deleteConfirmMainSkill('1');"></i>
-                            </td>
-                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+
+                                <td>
+                                    @item.MainSkillName
+                                </td>
+                                <td>
+                                    @item.MainSkillDesctiption
+                                </td>
+                                <td>
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" name="chkActive" checked="@item.Active">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </td>
+                                <td>
+                                    <i class="menu-icon mdi mdi-pencil action-icon-size" onclick="editMainSkill(@item.Id)"></i>
+                                    &nbsp;&nbsp;<i class="menu-icon mdi mdi-close-box action-icon-size" onclick="deleteConfirmMainSkill(@item.Id);"></i>
+                                </td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
-
-
-
-

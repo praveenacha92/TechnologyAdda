@@ -7,6 +7,8 @@ namespace TechnologyADDA.Models
     {
         public int Success { get; set; }
         
-        public List<T> Data { get; set; }
+        public List<T> ListData { get; set; }
+
+        public T Data { get; set; }
     }
 }

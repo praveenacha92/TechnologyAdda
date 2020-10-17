@@ -71,5 +71,11 @@
             public const string SubTopic = "Sub Topic";
             public const string Login = "Login";
         }
+
+        public class LookUpTable
+        {
+            public const string MainSkill = "MainSkill";
+
+        }
     }
 }

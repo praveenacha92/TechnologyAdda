@@ -11,5 +11,11 @@
         public static string sp_GetMainSkill = "sp_GetMainSkill";
         public static string sp_UpdateMainSkill = "sp_UpdateMainSkill";
         public static string sp_DeleteMainSkill = "sp_DeleteMainSkill";
+
+        // Accocunt
+        public static string sp_CreateUserAccount = "sp_CreateUserAccount";
+        public static string sp_GetUserAccount = "sp_GetUserAccount";
+        public static string sp_UpdateUserAccount = "sp_UpdateUserAccount";
+        public static string sp_DeleteUserAccount = "sp_DeleteUserAccount";
     }
 }
