@@ -1,6 +1,4 @@
-﻿
-
-namespace TechnologyADDA.Models
+﻿namespace TechnologyADDA.Models
 {
     public class KeyValue
     {

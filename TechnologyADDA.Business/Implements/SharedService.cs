@@ -6,6 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using TechnologyADDA.DataAccess;
+    using TechnologyADDA.Models;
 
     public class SharedService : ISharedService
     {
@@ -20,9 +21,9 @@
             sharedContext = new SharedContext();
         }
 
-        public KeyValuePair<int, string> GetDropDownData(string tableName)
+        public List<KeyValue> GetDropDownData(string tableName)
         {
-            KeyValuePair<int, string> keyValuePair;
+            List<KeyValue> keyValuePair;
             try
             {
                 keyValuePair = _sharedContext.GetDropDownData(tableName);

@@ -2,9 +2,10 @@
 namespace TechnologyADDA.Business
 {
     using System.Collections.Generic;
+    using TechnologyADDA.Models;
 
     public interface ISharedService
     {
-       KeyValuePair<int,string> GetDropDownData(string tableName);
+       List<KeyValue> GetDropDownData(string tableName);
     }
 }

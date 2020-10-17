@@ -24,6 +24,7 @@ const ajaxUrl = {
     SAVECHILDSKILL: '/Admin/SaveChildSkill/',
     UPDATECHILDSKILL: '/Admin/UpdateChildSkill/',
     DELETECHILDSKILL: '/Admin/DeleteChildSkill/',
+    GETCHILDSKILL: '/Admin/ManageChildSkill/',
 
     ADDPOPUPTOPIC: '/Admin/AddTopic/',
     EDITPOPUPTOPIC: '/Admin/EditTopic/',

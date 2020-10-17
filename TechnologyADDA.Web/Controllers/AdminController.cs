@@ -94,6 +94,7 @@
             string htmlMainSkill = CustomPartialView.RenderPartialViewToString(this, Enums.PartialView.AddEditChildSkill, new ChildSkill());
             return Json(new { modalBodyHtml = htmlMainSkill, modalHeader = CommonFunc.GetModalActionHeader(Enums.ScreenNames.ChildSkill, Enums.Actions.Add) }, JsonRequestBehavior.AllowGet);
         }
+
         public JsonResult EditChildSkill()
         {
             ChildSkill childSkill = new ChildSkill();
@@ -105,18 +106,23 @@
 
         public JsonResult SaveChildSkill(ChildSkill childSkill)
         {
-            //_adminService.Save(childSkill);
-            return Json("");
+            childSkill.CreatedBy = SessionManager.UserName;
+            Result<ChildSkill> result =  _adminService.SaveChildSkill(childSkill);
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult UpdateChildSkill()
+        public JsonResult UpdateChildSkill(ChildSkill childSkill)
         {
-            return Json("");
+            childSkill.CreatedBy = SessionManager.UserName;
+            Result<ChildSkill> result = _adminService.UpdateChildSkill(childSkill);
+            return Json(result, JsonRequestBehavior.AllowGet);
+
         }
 
         public JsonResult DeleteChildSkill(int Id)
         {
-            return Json("");
+            Result<ChildSkill> result = _adminService.DeleteChildSkill(Id);
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
         #endregion
 
